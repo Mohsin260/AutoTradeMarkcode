@@ -1,0 +1,9 @@
+{
+  "cloudcode.duetAI.inlineSuggestions.enableAuto": false,
+  "cody.commandCodeLenses": true,
+  "cody.debug.enable": true,
+  "cody.debug.verbose": true,
+  "cody.autocomplete.advanced.provider": "fireworks",
+  "cody.autocomplete.advanced.model": "mistral-7b-instruct-4k",
+  "cody.autocomplete.formatOnAccept": true
+}
