@@ -59,15 +59,15 @@ interface InventoryItem {
   purchaseDate: Date | null;
   priceLastUpdatedDays: number | null;
   btnlinks: {
-    view_details?: string;
-    test_drive?: string;
-    email_us?: string;
-    car_photos?: string;
-    apply_now?: string;
-    call_us?: string;
-    trade_ins?: string;
-    capital_one?: string;
-    capital_oneImg?: string;
+    view_details?: string | null;
+    test_drive?: string | null;
+    email_us?: string | null;
+    car_photos?: string | null;
+    apply_now?: string | null;
+    call_us?: string | null;
+    trade_ins?: string | null;
+    capital_one?: string | null;
+    capital_oneImg?: string | null;
   } | null;
   badges: {
     [key: string]: string;
