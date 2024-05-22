@@ -57,7 +57,7 @@ export const CapitalOneEntry_button = () => {
   );
 };
 
-interface Car {
+interface CarBtns {
   btnlinks?: {
     view_details?: string;
     test_drive?: string;
@@ -72,7 +72,7 @@ interface Car {
   // Add other properties as needed
 }
 
-const Buttons = ({ car }: { car: Car }) => {
+const Buttons = ({ car }: { car: CarBtns }) => {
   console.log(car)
   return (
     <>
