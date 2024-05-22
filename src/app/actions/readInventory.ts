@@ -86,22 +86,3 @@ export async function fetchButtonLinks(id: string) {
     throw error;
   }
 }
-
-export async function fetchCarBrands() {
-  try {
-    const carBrands = await prisma.carBrand.findMany({
-      select: {
-        id: true,
-        brandName: true,
-        brandCount: true,
-        imgSrc: true,
-        modelList: true,
-      },
-    });
-    console.log(carBrands);
-    return carBrands;
-  } catch (error) {
-    console.error("Error fetching car brands: ", error);
-    throw error;
-  }
-}
