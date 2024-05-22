@@ -74,6 +74,12 @@ export async function fetchButtonLinks(id: string) {
       select: { btnlinks: true },
     });
 
+    if (inventoryItem === null) {
+      console.error("No inventory item found for the given ID");
+      return null; // or throw an error, or return a default value
+    }
+
+
     return inventoryItem.btnlinks;
   } catch (error) {
     console.error("Error fetching button links: ", error);
