@@ -88,7 +88,7 @@ const CarCard = ({ car }) => {
                     <Image
                         loading="lazy"
                         src="/assets/images/autotrade-v4/military-discount.png"
-                        alt="Military Discount"
+                        alt="Military Discount image"
                         width={100}
                         height={100}
                     />
