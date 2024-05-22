@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model InventoryViewDTO {
+  id                    String @id @default(auto()) @map("_id") @db.ObjectId  
+  vehicleID             Int
+  modelYear             Int?
+  make                  String?
+  model                 String?
+  title                 String?
+  title_href            String?
+  price                 Float?
+  mileage               Int?
+  extColor              String?
+  intColor              String?
+  stockNumber           String?
+  vin                   String?
+  bodyStyle             String?
+  trim                  String?
+  isNew                 Boolean?
+  driveType             String?
+  mpg                   String?
+  inStockDate           DateTime?
+  age                   Int?
+  ageBand               String?
+  condition             String?
+  internetPrice         Float?
+  retailPrice           Float?
+  wholesalePrice        Float?
+  reducedPrice          Float?
+  isPublished           Boolean?
+  featured              Boolean?
+  salePending           Boolean?
+  spotLight             Boolean?
+  vehicleImage          String?
+  vehicle800Image       String?
+  vehicleTotalImages    Int?
+  doors                 Int?
+  creditApplicationCount Int?
+  vehicleLeadCount      Int?
+  liveDate              DateTime?
+  liveAge               Int?
+  engine                String?
+  transmission          String?
+  fuelType              String?
+  priceLastUpdated      DateTime?
+  purchaseDate          DateTime?
+  priceLastUpdatedDays  Int?
+  
+
+  // Relationships to other models
+  btnlinks        BtnLinks?
+  badges          Badges?
+}
+
+type BtnLinks {
+  view_details    String?
+  test_drive      String?
+  email_us        String?
+  car_photos      String?
+  apply_now       String?
+  call_us         String?
+  trade_ins       String?
+  capital_one     String?
+  capital_oneImg  String?
+}
+
+type Badges {
+  carfax          String?
+  carfax_img      String?
+  military_badge  String?
+}

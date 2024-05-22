@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "brandName": "ACURA",
+        "brandCount": 3,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/acura.png",
+        "modelsList": ["RDX(1)", "TLX(1)", "TSX SPORT WAGON(1)"]
+    },
+    {
+        "id": 2,
+        "brandName": "AUDI",
+        "brandCount": 11,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/audi.png",
+        "modelsList": ["A3(2)", "A4(2)", "A5(1)", "A6(2)", "Q5(3)", "S8(1)"]
+    },
+    {
+        "id": 3,
+        "brandName": "BMW",
+        "brandCount": 15,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/bmw.png",
+        "modelsList": ["3 SERIES(1)", "3 SERIES GRAN TURISMO(1)", "5 SERIES(4)", "X1(1)", "X3(2)", "X5(5)", "X6(1)"]
+    },
+    {
+        "id": 4,
+        "brandName": "BUICK",
+        "brandCount": 1,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/buick.png",
+        "modelsList": ["ENCLAV(1)"]
+    },
+    {
+        "id": 5,
+        "brandName": "CADILLAC",
+        "brandCount": 4,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/cadillac.png",
+        "modelsList": ["ESCALADE(1)", "XT5(2)", "XTS(1)"]
+    },
+    {
+        "id": 6,
+        "brandName": "CHEVROLET",
+        "brandCount": 9,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/chevrolet.png",
+        "modelsList": ["CRUZE (2)", "EXPRESS (1)", "SONIC (1)", "SUBURBAN (1)", "TAHOE (2)", "TRAVERSE (2)"]
+    },
+    {
+        "id": 7,
+        "brandName": "CHRYSLER",
+        "brandCount": 1,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/chrysler.png",
+        "modelsList": ["PACIFICA (1)"]
+    },
+    {
+        "id": 8,
+        "brandName": "FORD",
+        "brandCount": 13,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/ford.png",
+        "modelsList": ["ECONOLINE (1)", "EXPEDITION (1)", "EXPLORER (1)", "F-150 (1)", "FIESTA (1)", "MUSTANG (1)", "SUPER DUTY F-450 DRW (1)", "SUPER DUTY F-550 DRW (1)", "TRANSIT CONNECT (1)", "TRANSIT T-250 (1)", "TRANSIT T-350 (3)"]
+    },
+    {
+        "id": 9,
+        "brandName": "GMC",
+        "brandCount": 3,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/gmc.png",
+        "modelsList": ["SAVANA 2500 (1)", "SIERRA 1500 (1)", "YUKON XL DENALI (1)"]
+    },
+    {
+        "id": 10,
+        "brandName": "HONDA",
+        "brandCount": 16,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/honda.png",
+        "modelsList": ["ACCORD (4)", "ACCORD HYBRID (2)", "CIVIC (3)", "CIVIC HYBRID (1)", "CR-V (1)", "INSIGHT (1)", "ODYSSEY (3)", "PILOT (1)"]
+    },
+    {
+        "id": 11,
+        "brandName": "HYUNDAI",
+        "brandCount": 3,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/hyundai.png",
+        "modelsList": ["ELANTRA (1)", "EQUUS (1)", "SANTA FE (1)"]
+    },
+    {
+        "id": 12,
+        "brandName": "JEEP",
+        "brandCount": 5,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/jeep.png",
+        "modelsList": ["GRAND CHEROKEE (3)", "WRANGLER UNLIMITED (2)"]
+    },
+    {
+        "id": 13,
+        "brandName": "LAND ROVER",
+        "brandCount": 2,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/landrover.png",
+        "modelsList": ["DISCOVERY (1)", "DISCOVERY SPORT (1)"]
+    },
+    {
+        "id": 14,
+        "brandName": "LEXUS",
+        "brandCount": 3,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/lexus.png",
+        "modelsList": ["GX 460 (1)", "RX 300 (1)", "RX 450H (1)"]
+    },
+    {
+        "id": 15,
+        "brandName": "MAZDA",
+        "brandCount": 2,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/mazda.png",
+        "modelsList": ["CX-5 (1)", "MAZDA3 (1)"]
+    },
+    {
+        "id": 16,
+        "brandName": "MERCEDES-BENZ",
+        "brandCount": 23,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/mercedesbenz.png",
+        "modelsList": ["C-CLASS (3)", "CL-CLASS (1)", "E-CLASS (4)", "GLC (1)", "GLE (2)", "GLK-CLASS (1)", "GLS (1)", "M-CLASS (5)", "S-CLASS (1)", "SL-CLASS (1)", "SPRINTER 2500 (2)", "SPRINTER CARGO 3500 (1)"]
+    },
+    {
+        "id": 17,
+        "brandName": "MINI",
+        "brandCount": 2,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/mini.png",
+        "modelsList": ["COOPER HARDTOP (1)", "COUNTRYMAN (1)"]
+    },
+    {
+        "id": 18,
+        "brandName": "NISSAN",
+        "brandCount": 8,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/nissan.png",
+        "modelsList": ["ALTIMA (1)", "ARMADA (1)", "FRONTIER (1)", "MURANO (2)", "ROGUE (3)"]
+    },
+    {
+        "id": 19,
+        "brandName": "PORSCHE",
+        "brandCount": 2,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/porsche.png",
+        "modelsList": ["CAYENNE (1)", "PANAMERA (1)"]
+    },
+    {
+        "id": 20,
+        "brandName": "RAM",
+        "brandCount": 6,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/ram.png",
+        "modelsList": ["1500 (2)", "2500 (2)", "3500 (1)", "PROMASTER (1)"]
+    },
+    {
+        "id": 21,
+        "brandName": "SUBARU",
+        "brandCount": 3,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/subaru.png",
+        "modelsList": ["IMPREZA (1)", "IMPREZA SEDAN (1)", "OUTBACK (1)"]
+    },
+    {
+        "id": 22,
+        "brandName": "TOYOTA",
+        "brandCount": 19,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/toyota.png",
+        "modelsList": ["4RUNNER (2)", "CAMRY (5)", "COROLLA (2)", "PRIUS (2)", "RAV4 (1)", "SIENNA (1)", "TACOMA (3)", "TUNDRA (3)"]
+    },
+    {
+        "id": 23,
+        "brandName": "VOLKSWAGEN",
+        "brandCount": 6,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/volkswagen.png",
+        "modelsList": ["ATLAS (1)", "GOLF (1)", "JETTA (3)", "TOUAREG (1)"]
+    },
+    {
+        "id": 24,
+        "brandName": "VOLVO",
+        "brandCount": 1,
+        "imgSrc": "https://www.autotrademark.com/Content/images/samplesite-images/inventory-2/volvo.png",
+        "modelsList": ["XC60 (1)"]
+    }
+]

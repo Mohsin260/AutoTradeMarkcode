@@ -1,0 +1,1087 @@
+/*#region Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Play');
+@import url('https://fonts.googleapis.com/css?family=Oswald:100,200,300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+/* @import url(../../../code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css); */
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+/*#endregion */
+
+/*Inventory-2 Css Starts*/
+
+/* body {
+    color: #183558;
+}
+
+.tab-nav-inven {
+    background-color: #fff;
+} */
+
+.panel-head {
+    /*max-width: 360px;*/
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+/**
+ * Styling top level items
+ */
+.nav-tab a,
+.nav-tab label {
+    display: block;
+    padding: 1.3rem;
+    color: #183558;
+    background-color: #d6edff;
+    box-shadow: inset 0 -1px #d9dde9;
+    transition: all .25s ease-in;
+}
+
+    .tradeInButton {
+        left : 31% !important;
+    }
+
+    .nav-tab a:focus, .nav-tab a:hover,
+    .nav-tab label:focus,
+    .nav-tab label:hover {
+        color: #97a6b9;
+        background: #fff;
+    }
+
+.nav-tab label {
+    cursor: pointer;
+}
+
+ul.nav__list, ul.group-list, ul.sub-group-list, ul.sub-sub-group-list {
+    /*margin: 0 0 0 -40px;*/
+    list-style: none;
+    padding:0px;
+}
+
+/**
+ * Styling first level lists items
+ */
+.group-list a,
+.group-list label {
+    padding-left: 2rem;
+    background: #eaebec;
+    box-shadow: inset 0 -1px #d9dde9;
+}
+
+    .group-list a:focus, .group-list a:hover,
+    .group-list label:focus,
+    .group-list label:hover {
+        background: #edeff0;
+    }
+
+/**
+ * Styling second level list items
+ */
+.sub-group-list a,
+.sub-group-list label {
+    padding-left: 5.5rem;
+    background: #fff;
+    box-shadow: inset 0 -1px #f3f3f3;
+}
+
+    .sub-group-list a:focus, .sub-group-list a:hover,
+    .sub-group-list label:focus,
+    .sub-group-list label:hover {
+        background: #f3f3f3;
+    }
+
+/**
+ * Styling third level list items
+ */
+.sub-sub-group-list a,
+.sub-sub-group-list label {
+    padding-left: 6rem;
+    background: #454545;
+    box-shadow: inset 0 -1px #575757;
+}
+
+    .sub-sub-group-list a:focus, .sub-sub-group-list a:hover,
+    .sub-sub-group-list label:focus,
+    .sub-sub-group-list label:hover {
+        background: #333333;
+    }
+
+.nav__list .tab-nav-div {
+    padding-left: 6rem;
+    background: #454545;
+    box-shadow: inset 0 -1px #575757;
+}
+/**
+ * Hide nested lists
+ */
+.group-list,
+.sub-group-list,
+.sub-sub-group-list {
+    height: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out;
+    position: relative;
+}
+
+.nav__list input[type=checkbox]:checked + label + ul {
+    /* reset the height when checkbox is checked */
+    max-height: inherit;
+}
+
+/**
+ * Rotating chevron icon
+ */
+label > span {
+    float: right;
+    transition: transform .65s ease;
+}
+
+.nav__list input[type=checkbox]:checked + label > span {
+    transform: rotate(45deg);
+}
+
+/** Plus icon **/
+.nav__list input[type=checkbox] + label.check {
+    position: relative;
+}
+
+    .nav__list input[type=checkbox] + label.check:before, .nav__list input[type=checkbox] + label.check:after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        background-color: #97a6b9;
+        top: 50%;
+        transition: transform .65s ease;
+    }
+
+    .nav__list input[type=checkbox] + label.check:after {
+        width: 10px;
+        height: 8px;
+        margin-top: -4px;
+        right: 23px;
+        width: 2px;
+    }
+
+    .nav__list input[type=checkbox] + label.check:before {
+        height: 2px;
+        margin-top: -1px;
+        right: 20px;
+        width: 8px;
+    }
+
+.nav__list input[type=checkbox]:checked + label.check:before, .nav__list input[type=checkbox]:checked + label.check:after {
+    transform: rotate(90deg);
+}
+
+.nav__list input[type=checkbox]:checked + label.check:before {
+    display: none;
+}
+
+/**
+ * Styling footer
+ */
+.footer-tab {
+    padding-top: .41rem;
+    background-color: #d9dde9;
+}
+
+/*price-slider-css*/
+
+.filters {
+    padding: 30px 40px;
+    background-color: #fff;
+}
+
+    .filters .ui-slider-handle {
+        width: 2rem;
+        height: 2rem;
+        top: -0.9rem;
+        border: 0.4rem solid #5c93d5;
+        border-radius: 50%;
+        -webkit-transform: translateX(-0.9rem);
+        transform: translateX(-0.9rem);
+    }
+
+        .filters .ui-slider-handle:focus, .filters .ui-slider-handle:active {
+            outline: none;
+            background: #fff;
+        }
+
+.controls #price-range {
+    border: none;
+    background: #bfbfbf;
+    border-radius: 0;
+}
+
+    .controls #price-range .ui-slider-range {
+        background: #5c93d5;
+    }
+
+.textinputs {
+    /*padding: 1.5rem 0;*/
+}
+
+    .textinputs input {
+        width: 30%;
+        display: block;
+        float: left;
+        border: 1px solid #e4e4e4;
+        padding: 3px;
+        text-align: center;
+        font-size: 16px;
+        margin: 3px;
+        background-color: #f4f8fa;
+    }
+
+        .textinputs input:last-child {
+            float: left;
+        }
+
+.filters .ui-slider-horizontal {
+    height: 0.4em !important;
+}
+.filters span {
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    padding-top: 5px;
+}
+
+.engine-info {
+    width: 30%;
+    background-color: #f4f8fa !important;
+    text-align: center !important;
+    padding: 10px 0px !important;
+    text-transform: uppercase;
+    margin: 4px auto;
+    color: #183558 !important;
+    box-shadow: inset 0 -1px #e4e4e4 !important;
+}
+
+
+.engine-info-heading {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+}
+/*car-info-cards-css*/
+.post-module {
+    position: relative;
+    z-index: 1;
+    display: block;
+    background: #FFFFFF;
+    min-width: 270px;
+    height: 420px;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+    margin-bottom: 20px;
+}
+
+    .post-module:hover,
+    .hover {
+        -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+    }
+
+        .post-module:hover .thumbnail img,
+        .hover .thumbnail img {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            transform: scale(1.1);
+            opacity: 0.6;
+        }
+
+    .post-module .thumbnail {
+        background: #000000;
+        height: auto;
+        overflow: hidden;
+        padding:0px !important;
+    }
+
+        .post-module .thumbnail .date {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1;
+            background: #e74c3c;
+            width: 55px;
+            height: 55px;
+            padding: 12.5px 0;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            color: #FFFFFF;
+            font-weight: 700;
+            text-align: center;
+            -webkti-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+            .post-module .thumbnail .date .day {
+                font-size: 18px;
+            }
+
+            .post-module .thumbnail .date .month {
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+
+        .post-module .thumbnail img {
+            display: block;
+            width: 120%;
+            -webkit-transition: all 0.3s linear 0s;
+            -moz-transition: all 0.3s linear 0s;
+            -ms-transition: all 0.3s linear 0s;
+            -o-transition: all 0.3s linear 0s;
+            transition: all 0.3s linear 0s;
+        }
+
+    .post-module .post-content {
+        position: absolute;
+        bottom: 0;
+        background: #FFFFFF;
+        width: 100%;
+        padding: 40px 20px 10px;
+        -webkti-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+        -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+        -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+        -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+        transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    }
+
+        .post-module .post-content .category {
+            position: absolute;
+            top: -7px !important;
+            right: 0;
+            background: #000 !important;
+            padding: 10px 15px;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+    .post-module .categorySms {
+        position: absolute;
+        /*right : 65% !important;*/
+        left: 0;
+        background: #ffa500 !important;
+        padding: 10px 15px;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        z-index: 3;
+        top: -7px;
+    }
+
+
+        .post-module .post-content .title {
+            margin: 0;
+            padding: 0 0 10px;
+            color: #333333;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .post-module .post-content .sub_title {
+            margin: 0;
+            padding: 0 0 20px;
+            color: #333333;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .post-module .post-content .description {
+            display: none;
+            color: #666666;
+            font-size: 14px;
+            line-height: 1.8em;
+        }
+
+
+
+            .post-module .post-content .post-meta .timestamp {
+                margin: 0 16px 0 0;
+            }
+
+            .post-module .post-content .post-meta a {
+                color: #999999;
+                text-decoration: none;
+            }
+
+.hover .post-content .description {
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+}
+
+/*.car-card-info {
+    max-width: 800px;
+    min-width: 640px;
+    margin: 0 auto;
+}*/
+.car-card-info {
+    margin-top: 5px;
+}
+    .car-card-info:before,
+    .car-card-info:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .car-card-info .column {
+        width: 50%;
+        padding: 0 25px;
+        -webkti-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+    }
+
+        .car-card-info .column .demo-title {
+            margin: 0 0 15px;
+            color: #666666;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+    .car-card-info .info {
+        width: 300px;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+        .car-card-info .info h1 {
+            margin: 0 0 15px;
+            padding: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .car-card-info .info span {
+            color: #666666;
+            font-size: 12px;
+        }
+
+            .car-card-info .info span a {
+                color: #000000;
+                text-decoration: none;
+            }
+
+            .car-card-info .info span .fa {
+                color: #e74c3c;
+            }
+
+.post-content .post-meta {
+    margin: 0px !important;
+    color: #999999;
+    font-size: 12px;
+}
+
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    padding: 6px;
+    position: absolute;
+    left: 10px;
+}
+.black-circle {
+    background-color:black !important;
+}
+.black-Sliver {
+    background-color: #e0e0e0 !important;
+}
+.black-White {
+    background-color: #f3f0f0 !important;
+}
+.black-Gray {
+    background-color: #989898 !important;
+}
+.black-Red {
+    background-color: #dc4444 !important;
+}
+.black-Blue {
+    background-color: #3f72b0 !important;
+}
+.black-Gold {
+    background-color: #c29050 !important;
+}
+.black-Orange {
+    background-color: #da7a38 !important;
+}
+.black-Green {
+    background-color: #748959 !important;
+}
+.black-Brown {
+    background-color: #76523c !important;
+}
+.black-Other {
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) !important; /* Standard syntax (must be last) */
+}
+
+.color-beige {
+    background-color: #f5f5dc !important;
+}
+
+.color-burgundy {
+    background-color: #8C001A !important;
+}
+
+.color-yellow {
+    background-color: yellow !important;
+}
+
+.model-pic {
+    float: left;
+    /* width: 8%; */
+    position: relative;
+    /* margin-top: -8px; */
+    margin-right: 15px;
+}
+.body-car-pic {
+    float: left;
+    width: 15%;
+    position: relative;
+    margin-top: -14px;
+    margin-left: -45px;
+    margin-right: 15px;
+}
+.sub-group-list i {
+    position: absolute;
+    margin-top: 21px;
+    margin-left: 40px;
+    color: #97a6b9
+}
+.search-inven-bg {
+    background-color: #f4f8fa;
+    padding: 15px;
+    float: left;
+    width: 100%;
+    box-shadow: 0 4px 2px rgb(218, 224, 227);
+    margin-top: -9px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f4f8fa+100 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(244,248,250,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(244,248,250,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(244,248,250,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f8fa',GradientType=0 ); /* IE6-9 */
+}
+.opt-input {
+    border: 4px solid white;
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.1), 0 0 4px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 0 1px rgba(0,0,0,0.1), 0 0 4px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 1px rgba(0,0,0,0.1), 0 0 4px rgba(0,0,0,0.1);
+    padding: 4px 8px;
+    
+    /* margin: 0 0 10px 0; */
+}
+
+.filter-label span {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > a:after {
+        content: ">";
+        float: right;
+    }
+
+    .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+.btn-drop {
+    background-color: white;
+    padding: 5px 20px;
+    color: #2f2b2b;
+}
+.btn-drop {
+   
+    color: #2f2b2b !important;
+}
+.card-body {
+    margin-left: 18%;
+    position: relative;
+    margin-top: -20px;
+}
+
+.sort-list-drop {
+    position: relative;
+    float: right;
+    margin-top: -17px;
+}
+    .sort-list-drop a {
+        color: #000;
+    }
+
+.sort-list-drop a:hover {
+   color:#ccc;
+}
+.filter-div {
+    padding: 10px;
+    background-color: #f4f8fa !important;
+    margin-top: 5px;
+}
+.select-tick {
+    position: absolute;
+    right: 30px !important;
+    margin-top: -37px !important;
+    color: #619fc9 !important;
+}
+
+.clear-cross {
+    width: 100% !important;
+}
+
+.clear-make span, .clear-model span, .clear-bodystyle span, .clear-color span, .clear-home-inventory-bodystyle span, .clear-home-inventory-color span, .clear-min-year span, .clear-max-year span, .clear-miles span, .clear-price span, .clear-transmission span, .clear-mpg-to span {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.clear-make i, .clear-model i, .clear-bodystyle i, .clear-color i, .clear-home-inventory-bodystyle i, .clear-home-inventory-color i, .clear-min-year i, .clear-max-year i, .clear-miles i, .clear-price i, .clear-transmission i, .clear-mpg-to i {
+    float: right;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.search-bg {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-image: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.search-input {
+    width: 100%;
+    height: 60px;
+    background-color: #fff !important;
+    border: 1px solid #d9dde9 !important;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 60px !important;
+    background-image: url(/assets/images/automember-v2/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.filter-options .nav__list, .filter-options .group-list {
+    padding: 0;
+}
+
+.search-inven-bg h3 {
+    font-size:18px;
+}
+
+.filter-div h2 {
+    font-size: 18px;
+}
+
+/*Inventory-2 Css Ends*/
+@media all and (max-width:1600px) {
+    .post-module .post-content .category {
+        
+        top: 0px !important;
+       
+    }
+    .post-module {
+      
+        height: 370px;
+      
+    }
+        .post-module .categorySms {
+           
+            top: 0px;
+        }
+}
+
+@media all and (max-width:1440px) {
+    
+
+    .post-module {
+        height: 340px;
+    }
+}
+@media all and (max-width:1280px) {
+
+
+    .post-module {
+        height: 310px;
+    }
+}
+@media all and (max-width:1080px) {
+
+    /*.tab-nav-inven .col-sm-4 {
+        width:50%;
+    }*/
+  
+    .post-module {
+        height: 360px;
+    }
+    .nav-tab a, .nav-tab label {
+        padding: 1.0rem;
+        font-size: 14px;
+    }
+    .filters span {
+        
+        font-size: 12px;
+    }
+    .textinputs input {
+      
+        font-size: 12px;
+      
+    }
+    .sub-group-list a, .sub-group-list label {
+        font-size: 12px !important;
+        padding-left: 3rem;
+    }
+    .filters {
+        padding: 30px 21px;
+        
+    }
+    .textinputs input {
+        width: 25%;
+    }
+    }
+@media all and (max-width:992px) {
+    .post-module .categorySms {
+        top: -3px;
+    }
+    .post-module .post-content .category {
+        top: -3px !important;
+    }
+}
+@media all and (max-width:834px) {
+    .post-module .categorySms {
+        top: -35px;
+    }
+
+    .post-module .post-content .category {
+        top: -35px !important;
+    }
+    .sort-list-drop a {
+       
+        font-size: 12px;
+    }
+
+}
+@media all and (max-width:800px) {
+    .tab-nav-inven .col-sm-9{
+        width:100%;
+    }
+}
+
+   
+    @media all and (max-width:768px) {
+        .sub-group-list a, .sub-group-list label {
+        font-size: 14px !important;
+        padding-left: 7rem;
+    }
+    .color-circle {
+       
+        left: 30px;
+    }
+}
+
+
+    @media all and (max-width:800px) {
+
+
+        .post-module .categorySms {
+            top: -2px;
+        }
+
+        .post-module .post-content .category {
+            top: -2px !important;
+        }
+
+        .sort-list-drop a {
+            font-size: 14px;
+        }
+
+        .tab-nav-inven .col-sm-3 {
+            width: 100%
+        }
+
+        .post-module {
+            height: 320px;
+        }
+
+        .body-car-pic {
+            margin-left: -5px;
+        }
+
+        .model-pic {
+            width: 5%;
+            margin-top: -13px;
+        }
+
+        .body-car-pic {
+            width: 7%;
+        }
+
+        .search-bg {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    @media all and (max-width:768px) {
+        .tab-nav-inven .col-sm-9 {
+            width: 100%;
+        }
+    }
+
+    @media all and (max-width:767px) {
+        .tab-nav-inven .col-sm-4 {
+            width: 100%;
+        }
+
+        .listing_sort {
+            width: 100%;
+        }
+
+        .post-module {
+            height: 620px;
+        }
+
+            .post-module .categorySms {
+                top: -28px;
+            }
+
+            .post-module .post-content .category {
+                top: -28px !important;
+            }
+    }
+
+    @media all and (max-width:640px) {
+
+
+        .post-module {
+            height: 532px;
+        }
+
+        .tab-nav-inven .col-sm-3 {
+            width: auto;
+        }
+    }
+
+    @media all and (max-width:480px) {
+        .post-module .categorySms {
+            top: -13px;
+        }
+
+        .post-module .post-content .category {
+            top: -13px !important;
+        }
+
+        .post-module {
+            height: 430px;
+        }
+
+        .search-input {
+            font-size: 16px;
+        }
+    }
+
+    @media all and (max-width:414px) {
+
+        .search-inven-bg .col-xs-6 {
+            width: 100%;
+        }
+
+        .search-inven-bg .opt-input {
+            float: right;
+        }
+
+        .search-inven-bg .listings-dropdown {
+            float: right;
+        }
+
+        .post-module {
+            height: 385px;
+        }
+
+        .search-input {
+            font-size: 14px;
+            padding-left: 50px !important;
+            height: 50px;
+        }
+    }
+
+    @media all and (max-width:375px) {
+
+        .post-module .categorySms {
+            top: -12px;
+        }
+
+        .post-module .post-content .category {
+            top: -12px !important;
+        }
+
+        .post-module {
+            height: 360px;
+        }
+
+        .search-input {
+            font-size: 12px;
+        }
+
+        .smart-search {
+            margin: 0px !important;
+        }
+    }
+
+    @media all and (max-width:320px) {
+
+
+        .post-module {
+            height: 320px;
+        }
+
+            .post-module .categorySms {
+                top: -2px;
+            }
+
+            .post-module .post-content .category {
+                top: -2px !important;
+            }
+    }
+
+
+    /**********pending-sale-css-starts*********/
+    .skewed-pending-iven {
+        margin: 0 auto;
+        margin-top: 15%;
+        font-size: 28px;
+        text-align: center;
+        -moz-font-feature-settings: "ss09";
+        -webkit-font-feature-settings: "ss09";
+        font-feature-settings: "ss09";
+        transform: skew( 0deg, -12deg );
+        background-color: black;
+        text-transform: uppercase;
+        padding: 10px;
+        opacity: .8;
+        position: absolute;
+        z-index: 2;
+        width: 88%;
+        color: #fff;
+    }
+
+
+    @media screen and (max-width: 1170px) {
+        .skewed-pending-iven {
+            font-size: 26px;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .skewed-pending-iven {
+            font-size: 23px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .skewed-pending-iven {
+            font-size: 66px;
+            padding: 0px
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .skewed-pending-iven {
+            font-size: 50px;
+        }
+    }
+
+    @media screen and (max-width: 568px) {
+        .skewed-pending-iven {
+            font-size: 50px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .skewed-pending-iven {
+            font-size: 41px;
+        }
+    }
+
+    @media screen and (max-width: 414px) {
+        .skewed-pending-iven {
+            font-size: 33px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .skewed-pending-iven {
+            font-size: 26px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .skewed-pending-iven {
+            font-size: 28px;
+            padding: 10px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .skewed-pending-iven {
+            font-size: 25px;
+            padding: 10px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

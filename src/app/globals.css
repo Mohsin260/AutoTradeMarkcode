@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+button:hover .button-svg {
+    filter: brightness(0) invert(1);
+  }
+  

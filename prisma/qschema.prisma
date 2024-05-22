@@ -1,0 +1,264 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Car {
+  id          String       @id @default(auto()) @map("_id") @db.ObjectId
+  model       String
+  intsurface  String
+  dealerid    String
+  fueltype    String
+  mpghwy      Int
+  trim        String
+  brand       String
+  stk         String
+  doors       String
+  mpgcity     Int
+  interior    String
+  vin         String
+  drivetype   String
+  SK          String
+  PK          String
+  bodystyle   String
+  engine      String
+  branchid    String
+  color       String
+  type        String
+  transmission String
+  mileage     Int
+
+
+  // Relationships to other models
+  flags       CarFlags      @relation(fields: [flagsId], references: [id])
+  flagsId     String        @db.ObjectId
+  images      CarImages     @relation(fields: [imagesId], references: [id])
+  imagesId    String        @db.ObjectId
+  options     CarOptions    @relation(fields: [optionsId], references: [id])
+  optionsId   String        @db.ObjectId
+  price       CarPrice      @relation(fields: [priceId], references: [id])
+  priceId     String        @db.ObjectId
+  purchase    CarPurchase?  @relation(fields: [purchaseId], references: [id])
+  purchaseId  String        @db.ObjectId
+  title       CarTitle?     @relation(fields: [titleId], references: [id])
+  titleId     String        @db.ObjectId
+}
+
+model CarFlags {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  financed        Boolean
+  certified       Boolean
+  spotLight       Boolean
+  dealerid        String
+  cargurusLink    Boolean
+  cargurusbadge   Boolean
+  carfaxlink      Boolean
+  framedamage     Boolean
+  lowmileagebadge Boolean
+  greenlightbadge Boolean
+  nohagglebadge   Boolean
+  localtradebadge Boolean
+  SK              String
+  PK              String
+  branchid        String
+  featured        Boolean
+  type            String
+
+   // Relation to Car
+  car            Car[]
+}
+
+model CarImages {
+  id         String     @id @default(auto()) @map("_id") @db.ObjectId
+  SK         String
+  attributes String[]
+  dealerid   String
+  PK         String
+  type       String
+
+  // Reference to the Car model
+  car        Car[]  
+}
+
+model CarOptions {
+  id         String      @id @default(auto()) @map("_id") @db.ObjectId
+  SK         String
+  attributes String[]
+  dealerid   String
+  PK         String
+  type       String
+
+  // Reference to the Car model
+  car        Car[]   
+} 
+
+model CarPrice {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  retail      String
+  nopriceflag String
+  dealerid    String
+  reduced     String
+  internet    String
+  SK          String
+  wholesale   String
+  retailflag  String
+  PK          String
+  branchid    String
+  type        String
+
+  // Reference to the Car model
+  car         Car[]
+}
+
+model CarPurchase {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  dealerid    String
+  buyer       String
+  seller      String
+  fpinfo      FPInfo      @relation(fields: [fpinfoId], references: [id])
+  fpinfoId    String      @db.ObjectId @unique
+  consigner   CONSIGNER   @relation(fields: [consignerId], references: [id])
+  consignerId String      @db.ObjectId @unique
+  date        String
+  amount      String
+
+  // Reference to the Car model
+  car         Car[]
+}
+
+model FPInfo {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  fpname      String
+  applieddate DateTime
+
+// Reference to the CarPurchase model 
+  carPurchase CarPurchase?
+}
+
+model CONSIGNER {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  price       String
+
+// Reference to the CarPurchase model
+  carPurchase CarPurchase?
+}
+
+model CarTitle {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  dealerid    String
+  number      String
+  inhouse     Boolean
+  comments    String
+  SK          String
+  PK          String
+  branchid    String
+  state       String
+  type        String
+
+  // Reference to the Car model
+  car         Car[]
+}
+
+
+
+model User {
+  id        String         @id @default(auto()) @map("_id") @db.ObjectId
+  username  String         @unique
+  email     String         @unique
+  password  String
+  phone     String
+  address   String
+  img       String
+  isAdmin   Boolean        @default(false)
+  isActive  Boolean        @default(true)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+
+model InventoryViewDTO {
+  id                    String @id @default(auto()) @map("_id") @db.ObjectId  
+  vehicleID             Int
+  modelYear             Int?
+  make                  String?
+  model                 String?
+  title                 String?
+  title_href            String?
+  price                 Float?
+  mileage               Int?
+  extColor              String?
+  intColor              String?
+  stockNumber           String?
+  vin                   String?
+  bodyStyle             String?
+  trim                  String?
+  isNew                 Boolean?
+  driveType             String?
+  mpg                   String?
+  inStockDate           DateTime?
+  age                   Int?
+  ageBand               String?
+  condition             String?
+  internetPrice         Float?
+  retailPrice           Float?
+  wholesalePrice        Float?
+  reducedPrice          Float?
+  isPublished           Boolean?
+  featured              Boolean?
+  salePending           Boolean?
+  spotLight             Boolean?
+  vehicleImage          String?
+  vehicle800Image       String?
+  vehicleTotalImages    Int?
+  doors                 Int?
+  creditApplicationCount Int?
+  vehicleLeadCount      Int?
+  liveDate              DateTime?
+  liveAge               Int?
+  engine                String?
+  transmission          String?
+  fuelType              String?
+  priceLastUpdated      DateTime?
+  purchaseDate          DateTime?
+  priceLastUpdatedDays  Int?
+  
+  btnlinks              BtnLinks? @relation("InventoryViewDTOToBtnLinks")
+  badges                Badges? @relation("InventoryViewDTOToBadges")
+}
+
+model BtnLinks {
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  view_details   String?
+  test_drive     String?
+  email_us       String?
+  car_photos     String?
+  apply_now      String?
+  call_us        String?
+  trade_ins      String?
+  capital_one    String?
+  capital_oneImg String?
+
+  // Relation to InventoryViewDTO
+  inventoryviewdtoId       String?   @db.ObjectId @unique
+  inventoryviewdto         InventoryViewDTO?      @relation("InventoryViewDTOToBtnLinks", fields: [inventoryviewdtoId], references: [id])
+}
+
+model Badges {
+  id              String  @id @default(auto()) @map("_id") @db.ObjectId
+  carfax          String?
+  carfax_img      String?
+  military_badge  String?
+
+  // Relation to InventoryViewDTO
+  inventoryviewdtoId       String?   @db.ObjectId @unique
+  inventoryviewdto         InventoryViewDTO?      @relation("InventoryViewDTOToBadges", fields: [inventoryviewdtoId], references: [id])
+}
+
