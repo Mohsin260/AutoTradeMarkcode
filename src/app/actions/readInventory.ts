@@ -20,7 +20,7 @@ export const fetchInventory = async (skip = 0, take = 10, sort = "") => {
     const inventory = await prisma.inventoryViewDTO.findMany({
       skip: skip,
       take: take,
-      orderBy: orderBy,
+      orderBy: orderBy as any,
     });
 
     console.log("inventory", inventory);
