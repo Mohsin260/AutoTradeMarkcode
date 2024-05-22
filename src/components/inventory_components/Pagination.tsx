@@ -38,7 +38,7 @@ const Pagination: React.FC<PaginationProps> = ({ totalPages, currentPage, onPage
       ))}
 
       {currentPage < totalPages && (
-        <button onClick={() => handlePageChange(currentPage + 1)}>></button>
+        <button onClick={() => handlePageChange(currentPage + 1)}>`{'>'}`</button>
       )}
     </div>
   );
