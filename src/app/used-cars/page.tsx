@@ -70,7 +70,7 @@ interface InventoryItem {
     capital_oneImg?: string | null;
   } | null;
   badges: {
-    [key: string]: string;
+    [key: string]: string | null;
   } | null;
 }
 
