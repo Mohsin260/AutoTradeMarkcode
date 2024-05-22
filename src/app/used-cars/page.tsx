@@ -58,8 +58,20 @@ interface InventoryItem {
   priceLastUpdated: Date | null;
   purchaseDate: Date | null;
   priceLastUpdatedDays: number | null;
-  btnlinks: {};
-  badges: {};
+  btnlinks: {
+    view_details?: string;
+    test_drive?: string;
+    email_us?: string;
+    car_photos?: string;
+    apply_now?: string;
+    call_us?: string;
+    trade_ins?: string;
+    capital_one?: string;
+    capital_oneImg?: string;
+  } | null;
+  badges: {
+    [key: string]: string;
+  } | null;
 }
 
 const InventoryPage = () => {
